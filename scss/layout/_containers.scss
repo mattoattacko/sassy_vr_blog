@@ -4,19 +4,16 @@
 
 // Main content
 .main-content {
-  display: flex;
-  flex-wrap: wrap;
-  @media (min-width: $break-m) {
-    @include center;
+  @include flexy($wrap: wrap);
+  @include mq('med') {
+    @include center(90%);
   }
 }  
-
 
 // Inner
 .inner {
   padding: 0.5em 1em;
 }
-
 
 // Intro
 .intro {
@@ -25,7 +22,7 @@
   p {
     font-size: 1.2em; 
   } 
-  @media (min-width: $break-l) {
+  @include mq('lg') {
     width: 45%;
   }
 }
